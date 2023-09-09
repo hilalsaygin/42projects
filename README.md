@@ -1,2 +1,2 @@
 # 42projects
-projects developed during 42 school
+Projects developed during Ecole 42 school
