@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_print_combn.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: hilal <hilal@student.42.fr>                +#+  +:+       +#+        */
+/*   By: rsaygin <rsaygin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/05 18:29:01 by rsaygin           #+#    #+#             */
-/*   Updated: 2023/09/09 21:03:18 by hilal            ###   ########.fr       */
+/*   Updated: 2023/09/13 18:07:44 by rsaygin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -87,10 +87,4 @@ void	find_combn(int start, char *s, int n, int *digit)
 		find_combn(i + 1, s2, n - 1, digit);
 		i++;
 	}
-}
-
-void	ft_print_combn(int n)
-{
-	if (n > 0 && n < 10)
-		find_combn(0, "", n, &n);
 }

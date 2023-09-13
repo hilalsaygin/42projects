@@ -9,12 +9,12 @@
 /*   Updated: 2023/09/05 18:28:47 by rsaygin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-#include<unistd.h>
+#include <unistd.h>
 
 void	ft_is_negative(int n)
 {
-	if(n < 0)
+	if (n < 0)
 		write(1, "N", 1);
 	else
-		write(1, &"P", 1);
+		write(1, "P", 1);
 }
