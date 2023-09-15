@@ -6,24 +6,25 @@
 /*   By: hilal <hilal@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/07 22:15:12 by hilal             #+#    #+#             */
-/*   Updated: 2023/09/07 22:17:20 by hilal            ###   ########.fr       */
+/*   Updated: 2023/09/15 20:25:20 by hilal            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
 
-int ft_strlen(char *str)
+int	ft_strlen(char *str)
 {
-    int i;
+	int	i;
 
-    i=0;
-
-    while (str[i++] != '\0');
-
-    return i;
+	i = 0;
+	while (str[i] != '\0')
+	{
+		i++;
+	}
+	return (i);
 }
 
-void    ft_putstr(char *str)
+void	ft_putstr(char *str)
 {
-    write (1, str, ft_strlen(str));
+	write (1, str, ft_strlen(str));
 }

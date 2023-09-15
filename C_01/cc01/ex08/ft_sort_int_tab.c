@@ -6,30 +6,32 @@
 /*   By: hilal <hilal@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/07 23:40:54 by hilal             #+#    #+#             */
-/*   Updated: 2023/09/07 23:40:55 by hilal            ###   ########.fr       */
+/*   Updated: 2023/09/15 20:47:09 by hilal            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
 #include <stdio.h>
 
-void ft_sort_int_tab(int *tab, int size)
+void	ft_sort_int_tab(int *tab, int size)
 {
-    int current, i, j;
-    i = 1;
+	int	current;
+	int	i;
+	int	j;
 
-    while (i < size)
-    {
-        current = tab[i];
-        j = i - 1;
-        while (j >= 0 && tab[j] > current )
-        {
-            tab[j + 1] = tab[j];
-            j--;
-        }
-        tab[j + 1] = current;
-        i++;
-    }
+	i = 1;
+	while (i < size)
+	{
+		current = tab[i];
+		j = i - 1;
+		while (j >= 0 && tab[j] > current)
+		{
+			tab[j + 1] = tab[j];
+			j--;
+		}
+		tab[j + 1] = current;
+		i++;
+	}
 }
 
 int main ( ){
