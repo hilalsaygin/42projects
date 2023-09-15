@@ -21,6 +21,7 @@ void	ft_putnbr(int nb)
 
 	div = nb;
 	count = 0;
+	
 	if (div == 0)
 	{
 		write(1, "0", 1);
@@ -28,6 +29,12 @@ void	ft_putnbr(int nb)
 	}
 	if (div < 0)
 	{
+		if(div == -2147483648)
+		{
+			div = div / 10;
+			g_digits[i] = 8 + '0';
+			i++;
+		}
 		write(1, "-", 1);
 		div = (-div);
 	}
