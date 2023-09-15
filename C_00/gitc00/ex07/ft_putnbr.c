@@ -32,8 +32,8 @@ void	ft_putnbr(int nb)
 		if(div == -2147483648)
 		{
 			div = div / 10;
-			g_digits[i] = 8 + '0';
-			i++;
+			g_digits[count] = 8 + '0';
+			count++;
 		}
 		write(1, "-", 1);
 		div = (-div);
