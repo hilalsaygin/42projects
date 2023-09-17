@@ -6,9 +6,10 @@
 /*   By: rsaygin <rsaygin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/05 18:28:46 by rsaygin           #+#    #+#             */
-/*   Updated: 2023/09/05 18:28:47 by rsaygin          ###   ########.fr       */
+/*   Updated: 2023/09/17 14:13:42 by rsaygin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
 #include <unistd.h>
 
 void	ft_is_negative(int n)

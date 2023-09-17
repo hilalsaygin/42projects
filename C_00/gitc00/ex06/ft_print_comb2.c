@@ -6,46 +6,37 @@
 /*   By: rsaygin <rsaygin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/05 18:28:53 by rsaygin           #+#    #+#             */
-/*   Updated: 2023/09/14 20:09:57 by rsaygin          ###   ########.fr       */
+/*   Updated: 2023/09/17 14:00:52 by rsaygin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
 
-char	g_digits[20];
+void	ft_putchar(char c)
+{
+	write(1, &c, 1);
+}
 
 void	ft_putnbr(int nb)
 {
-	int	div;
-	int	count;
-
-	div = nb;
-	count = 0;
-	
-	if (div == 0)
+	if (nb == -2147483648)
 	{
-		write(1, "0", 1);
-		return ;
+		ft_putnbr(nb / 10);
+		ft_putchar('8');
 	}
-	if (div < 0)
+	else if (nb < 0)
 	{
-		if(div == -2147483648)
+		ft_putchar('-');
+		ft_putnbr(-nb);
+	}
+	else
+	{
+		if (nb > 9)
 		{
-			div = div / 10;
-			g_digits[count] = 8 + '0';
-			count++;
+			ft_putnbr(nb / 10);
 		}
-		write(1, "-", 1);
-		div = (-div);
+		ft_putchar(48 + nb % 10);
 	}
-	while (div > 0)
-	{
-		g_digits[count] = (div % 10) + '0';
-		div = div / 10;
-		count++;
-	}
-	while ((--count) >= 0)
-		write(1, &g_digits[count], 1);
 }
 
 void	ft_print_comb2(void)
